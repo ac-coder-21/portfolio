@@ -18,7 +18,12 @@ const config = {
       },
     },
     extend: {
+      fontSize: {
+        'heading-large': '4rem'
+      },
       colors: {
+        'dark-heading': "#D3C5C5",
+        bgcolor: "#050816",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

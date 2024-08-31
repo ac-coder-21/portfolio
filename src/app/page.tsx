@@ -1,7 +1,8 @@
 import Image from "next/image";
+import Home from "@/components/Home/Home";
 
-export default function Home() {
+export default function Homepage() {
   return (
-    <div>Welcome to Portfolio website</div>
+    <Home/>
   );
 }
