@@ -23,6 +23,7 @@ const config = {
       },
       colors: {
         'dark-heading': "#D3C5C5",
+        'light-heading': "#545050",
         bgcolor: "#050816",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
