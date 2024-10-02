@@ -1,5 +1,6 @@
 import MySkills from "./MySkills/MySkills";
 import { MyGuidingValues } from './MyGuidingValues/MyGuidingValues';
+import { MyProjects } from "./MyProjects/MyProjects";
 import HeroSection from "./HeroSection/HeroSection";
 import { TimelineDemo } from "./MyEducation/MyEducation";
 
@@ -9,6 +10,7 @@ const Home = () => {
           <HeroSection />
           <MyGuidingValues />
           <TimelineDemo />
+          <MyProjects />
           <MySkills />
           
           
