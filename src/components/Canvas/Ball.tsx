@@ -3,6 +3,7 @@ import { Canvas, useLoader } from "@react-three/fiber";
 import { Decal, Float, OrbitControls, Preload } from "@react-three/drei";
 import * as THREE from "three";
 
+
 import CanvasLoader from "./CanvasLoader";
 
  

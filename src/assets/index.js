@@ -1,2 +1,5 @@
-import CSSPNG from './tech/css.png';
-import DOCKERPNG from './tech'
+
+
+import LOTTIETHINK from './lottie/lottie_thinking.json';
+
+export {LOTTIETHINK}
