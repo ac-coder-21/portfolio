@@ -3,6 +3,7 @@ import { MyGuidingValues } from './MyGuidingValues/MyGuidingValues';
 import { MyProjects } from "./MyProjects/MyProjects";
 import HeroSection from "./HeroSection/HeroSection";
 import { TimelineDemo } from "./MyEducation/MyEducation";
+import { MyCertification } from "./MyCertification/MyCertification";
 
 const Home = () => {
     return(
@@ -12,8 +13,7 @@ const Home = () => {
           <TimelineDemo />
           <MyProjects />
           <MySkills />
-          
-          
+          <MyCertification />
         </div>
     )
 }

@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { PinContainer } from "@/components/ui/3d-pin";
-import { CldImage } from "next-cloudinary";
 
 const projectsData = [
   {
@@ -34,7 +33,7 @@ export function MyProjects() {
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen dark:bg-gray-900">
-      <h1 className="text-heading-large font-inter text-light-heading pb-10">
+      <h1 className="text-heading-large font-inter text-light-heading pb-10 text-center">
         My Projects
       </h1>
       <div className="py-20 flex flex-col lg:flex-row items-center justify-center bg-white dark:bg-black w-full gap-12 mx-auto px-8">
@@ -47,7 +46,7 @@ export function MyProjects() {
               <div className="text-base !m-0 !p-0 font-normal">
                 <span className="text-slate-500">{project.description}</span>
               </div>
-              {/* Display the image using CldImage */}
+              
               <div className="flex flex-1 w-full rounded-lg mt-4">
                 
               </div>

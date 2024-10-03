@@ -69,6 +69,9 @@ export function TimelineDemo() {
       content: (
         <div className="text-white">
           <div>
+          <p className="timeline-marks text-sm md:text-base font-normal mb-4">
+            <strong>Searching in the Field of Data Science, Data Engineering, Data Analysis, Statistics, Machine Learning</strong>
+          </p>
             <Lottie animationData={LOTTIETHINK} loop={true} height={200} width={200}/>
           </div>
          
