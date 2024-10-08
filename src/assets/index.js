@@ -1,2 +1,3 @@
-import CSSPNG from './tech/css.png';
-import DOCKERPNG from './tech'
+import UnderContruction from './UNDER_CONSTRUCTION.json'
+
+export {UnderContruction}
