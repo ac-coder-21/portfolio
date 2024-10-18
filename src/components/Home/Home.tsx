@@ -4,6 +4,7 @@ import { MyProjects } from "./MyProjects/MyProjects";
 import HeroSection from "./HeroSection/HeroSection";
 import { TimelineDemo } from "./MyEducation/MyEducation";
 import { MyCertification } from "./MyCertification/MyCertification";
+import MySocials from "./MySocials/MySocials";
 
 const Home = () => {
     return(
@@ -14,6 +15,7 @@ const Home = () => {
           <MyProjects />
           <MySkills />
           <MyCertification />
+          <MySocials />
         </div>
     )
 }

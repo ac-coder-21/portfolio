@@ -20,7 +20,7 @@ export function MyCertification() {
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen dark:bg-gray-900">
-      <h1 className="text-heading-large font-inter text-light-heading pb-10 text-center text-[2rem] sm:text-[3rem] md:text-[4rem]">
+      <h1 className="text-heading-large font-inter text-light-heading pb-10 text-center sm:text-[3rem] md:text-[4rem]">
         My Certificates
       </h1>
       <div className="flex flex-wrap space-x-6 items-center justify-center h-[40rem]">
