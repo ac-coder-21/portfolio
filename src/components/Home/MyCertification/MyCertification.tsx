@@ -19,13 +19,17 @@ export function MyCertification() {
   ];
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen dark:bg-gray-900">
+    <div className="flex flex-col justify-center items-center min-h-screen py-10 dark:bg-gray-900">
       <h1 className="text-heading-large font-inter text-light-heading pb-10 text-center sm:text-[3rem] md:text-[4rem]">
         My Certificates
       </h1>
-      <div className="flex flex-wrap space-x-6 items-center justify-center h-[40rem]">
+      <div className="flex flex-wrap gap-6 items-center justify-center">
         {certificates.map((certificate, index) => (
-          <DirectionAwareHover key={index} imageUrl={certificate.imageUrl} className="flex-1 min-w-[200px]">
+          <DirectionAwareHover
+            key={index}
+            imageUrl={certificate.imageUrl}
+            className="flex-1 min-w-[200px] max-w-[300px] p-4"
+          >
             <p className="font-bold text-xl text-center">{certificate.text}</p>
           </DirectionAwareHover>
         ))}

@@ -7,11 +7,9 @@ import { FaXTwitter } from 'react-icons/fa6'
 const MySocials: React.FC = () => {
   return (
     <div className="flex flex-col items-center md:flex-row justify-between mx-auto px-6 md:px-20 my-52">
-      {/* Added margin-left to shift the heading to the right */}
       <h1 className="text-heading-large font-inter text-light-heading pb-10 text-center sm:text-[3rem] md:text-[4rem] ml-6 md:ml-10">
         My Socials
       </h1>
-      {/* Added margin-right to shift the icons to the left and padding for spacing inside the icons */}
       <div className="flex space-x-6 text-6xl text-gray-700 mr-6 md:mr-10">
         <a href="https://www.linkedin.com/in/amogh-chavan-21-coder/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin className="p-2 hover:text-blue-600 transition-colors" />
