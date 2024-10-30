@@ -6,6 +6,7 @@ import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
 import { FlipWords } from '@/components/ui/flip-words';
 
+
 const HeroSection: React.FC = () => {
 
   const abilities = ["Data Science", "NLP", "Model Building", "Computer Vision","Full Stack Development", "Database",]
@@ -22,9 +23,6 @@ const HeroSection: React.FC = () => {
           <p className="text-lg text-gray-400 mb-6">
           I'm Amogh Chavan, a Data Science and Machine Learning engineer, focused on analytics and data modeling to extract insights and drive decisions.
           </p>
-          <Button borderRadius="1.75rem" className="bg-[#25F5F5] dark:bg-slate-900 text-black dark:text-white  dark:border-slate-800">
-            Contact Me
-          </Button>
         </div>
 
         {/* Image Section */}
