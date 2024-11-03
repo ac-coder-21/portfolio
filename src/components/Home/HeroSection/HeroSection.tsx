@@ -18,10 +18,10 @@ const HeroSection: React.FC = () => {
       <div className="flex flex-col lg:flex-row justify-center items-center lg:space-x-32">
         {/* Text Section */}
         <div className="text-center lg:text-left lg:w-1/3 w-full px-4">
-          <h1 className="text-5xl font-bold mb-4">Hello, I’m Amogh</h1>
+          <h1 className="text-5xl font-bold mb-4">Hello, I&apos;m Amogh</h1>
           <h2 className="text-3xl mb-6">I can do <FlipWords words={abilities} /> </h2>
           <p className="text-lg text-gray-400 mb-6">
-          I'm Amogh Chavan, a Data Science and Machine Learning engineer, focused on analytics and data modeling to extract insights and drive decisions.
+          I&apos;m Amogh Chavan, a Data Science and Machine Learning engineer, focused on analytics and data modeling to extract insights and drive decisions.
           </p>
         </div>
 
