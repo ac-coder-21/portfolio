@@ -24,7 +24,7 @@ const MySocials: React.FC = () => {
         <Link href="https://www.threads.net/@ac21.gg" target="_blank" rel="noopener noreferrer">
           <RiThreadsLine className="p-1 hover:text-black transition-colors" />
         </Link>
-        <Link href="https://www.coursera.org/user/58767d9136a9e5f3cf671c42ef2d3b1f" target="_blank" rel="noopener noreferrer">
+        <Link href="https://www.coursera.org/learner/ac-coder-21" target="_blank" rel="noopener noreferrer">
           <SiCoursera className="p-1 hover:text-blue-500 transition-colors" />
         </Link>
         <Link href="https://x.com/ac_coder21" target="_blank" rel="noopener noreferrer">
