@@ -28,7 +28,7 @@ const HeroSection: React.FC = () => {
         {/* Image Section */}
         <div className="mt-8 lg:mt-0">
           <div className="relative w-auto h-a rounded-full border-8 border-[#25F5F5] overflow-hidden">
-            <CldImage width="400" height="400" sizes='100vw' src={process.env.NEXT_PUBLIC_PROFILE_PIC} alt='profile pic' />
+            <CldImage width="400" height="400" sizes='100vw' src="Portfolio/profilepic" alt='profile pic' />
           </div>
         </div>
       </div>
