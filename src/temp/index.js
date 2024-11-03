@@ -1,13 +1,5 @@
 const technologies = [
     {
-      name: "HTML 5",
-      icon: "HTML",
-    },
-    {
-      name: "CSS 3",
-      icon: "css",
-    },
-    {
       name: "JavaScript",
       icon: "JavaScript",
     },
@@ -32,13 +24,39 @@ const technologies = [
       icon: "MongoDB",
     },
     {
-      name: "git",
-      icon: "git",
-    },
-    {
       name: "python",
       icon: "python",
     },
+    {
+      name: "deeplearning",
+      icon: "deeplearning",
+    },
+    {
+      name: "SQL",
+      icon: "SQL",
+    },
+    {
+      name: "postgre",
+      icon: "postgre",
+    },
+    {
+      name: "analytics",
+      icon: "analytics",
+    },
+    {
+      name: "java",
+      icon: "java",
+    },
+    {
+      name: "R",
+      icon: "R",
+    },
+    {
+      name: "NLP",
+      icon: "NLP",
+    },
+    
+    
   ];
 
 export {technologies}

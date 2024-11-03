@@ -7,7 +7,7 @@ import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 export function MyGuidingValues() {
     return (
       <div className="flex flex-col justify-center items-center min-h-screen  dark:bg-gray-900">
-        <h1 className='text-heading-large font-inter text-light-heading pb-10'>My Guiding Values</h1>
+        <h1 className='text-heading-large font-inter text-light-heading pb-10 text-center'>My Guiding Values</h1>
         <div className="py-20 flex flex-col lg:flex-row items-center justify-center bg-white dark:bg-black w-full gap-4 mx-auto px-8">
           <Card title="Committed to excellence and professional growth" displayString="Professionalism">
             <CanvasRevealEffect
