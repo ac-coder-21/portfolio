@@ -23,7 +23,11 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Analytics />
-        {children}</body>
+        <main className="min-h-screen w-full relative">
+
+          {children}
+        </main>
+      </body>
     </html>
   );
 }

@@ -1,6 +1,6 @@
-"use client";
-import React from "react";
-import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
+"use client"
+import Link from "next/link"
+import { DirectionAwareHover } from "@/components/ui/direction-aware-hover"
 
 export function MyCertification() {
   const certificates = [
@@ -16,14 +16,14 @@ export function MyCertification() {
       imageUrl: "Portfolio/certificates/Tata",
       text: "Tata Data Visualisation",
     },
-  ];
+  ]
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen py-10 px-4 md:px-20 dark:bg-gray-900">
       <h1 className="text-heading-large font-inter text-light-heading pb-10 text-center text-[3rem] md:text-[4rem]">
         My Certificates
       </h1>
-      <div className="flex flex-wrap gap-4 items-center justify-center max-w-full">
+      <div className="flex flex-wrap gap-4 items-center justify-center max-w-full mb-8">
         {certificates.map((certificate, index) => (
           <DirectionAwareHover
             key={index}
@@ -34,6 +34,12 @@ export function MyCertification() {
           </DirectionAwareHover>
         ))}
       </div>
+      <Link href="/certificates">
+        <button className="bg-[#050816] text-white font-bold py-4 px-8 rounded-xl text-xl hover:bg-[#0a0f2a] transition-colors duration-300">
+          View More
+        </button>
+      </Link>
     </div>
-  );
+  )
 }
+

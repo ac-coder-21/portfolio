@@ -2,7 +2,7 @@ import React from 'react';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { RiThreadsLine } from 'react-icons/ri';
 import { SiCoursera } from 'react-icons/si';
-import { FaXTwitter } from 'react-icons/fa6'
+import { FaXTwitter } from 'react-icons/fa6';
 import Link from 'next/link';
 
 const MySocials: React.FC = () => {
