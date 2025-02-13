@@ -1,8 +1,11 @@
 "use client";
 import React from "react";
+import { useRouter } from "next/navigation";
 import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
 
 export function MyCertification() {
+  const router = useRouter();
+  
   const certificates = [
     {
       imageUrl: "Portfolio/certificates/SPRKML",
@@ -34,6 +37,12 @@ export function MyCertification() {
           </DirectionAwareHover>
         ))}
       </div>
+      <button
+        onClick={() => router.push('/certificates')}
+        className="mt-8 px-6 py-3 bg-black text-white rounded hover:bg-gray-800 transition-colors"
+      >
+        View All Certificates
+      </button>
     </div>
   );
 }
