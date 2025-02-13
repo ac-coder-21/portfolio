@@ -1,9 +1,18 @@
 // src/app/api/Home/contactme/route.ts
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import { verifyOTP } from "../generateOtp/route";
 
 export async function POST(req: Request) {
-    const { name, email, message } = await req.json();
+    const { name, email, message, otp } = await req.json();
+
+    // Verify OTP first
+    if (!verifyOTP(email, otp)) {
+        return NextResponse.json(
+            { error: "Invalid or expired OTP" },
+            { status: 400 }
+        );
+    }
 
     const transporter = nodemailer.createTransport({
         service: 'Gmail',
@@ -35,6 +44,4 @@ export async function POST(req: Request) {
         console.error("Error sending email:", error);
         return NextResponse.json({ error: 'Error sending email' }, { status: 500 });
     }
-
-
 }

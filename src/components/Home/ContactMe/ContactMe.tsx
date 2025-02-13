@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from '@/components/ui/moving-border';
 import Lottie from "lottie-react";
 import { LOTTIECONTACT } from "@/assets";
@@ -9,10 +9,17 @@ const ContactMe = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
-    const [otp, setOtp] = useState("");
+    const [otpValues, setOtpValues] = useState(["", "", "", ""]);
     const [showOtpInput, setShowOtpInput] = useState(false);
     const [countdown, setCountdown] = useState(60);
     const [isResendDisabled, setIsResendDisabled] = useState(true);
+
+    const otpInputs = [
+        useRef<HTMLInputElement>(null),
+        useRef<HTMLInputElement>(null),
+        useRef<HTMLInputElement>(null),
+        useRef<HTMLInputElement>(null),
+    ];
 
     useEffect(() => {
         let timer: NodeJS.Timeout;
@@ -75,8 +82,42 @@ const ContactMe = () => {
         }
     };
 
+    const handleOtpChange = (index: number, value: string) => {
+        if (value.length > 1) value = value[0];
+        const newOtpValues = [...otpValues];
+        newOtpValues[index] = value;
+        setOtpValues(newOtpValues);
+
+        // Move to next input if value is entered
+        if (value && index < 3) {
+            otpInputs[index + 1].current?.focus();
+        }
+    };
+
+    const handleKeyDown = (index: number, e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === "Backspace" && !otpValues[index] && index > 0) {
+            otpInputs[index - 1].current?.focus();
+        }
+    };
+
     const verifyOtpAndSendEmail = async () => {
-        const formData = { name, email, message, otp };
+        // Validate OTP is complete
+        if (otpValues.some(value => value === "")) {
+            toast.error("Please enter the complete OTP", {
+                style: {
+                    background: '#ef4444',
+                    color: '#fff',
+                },
+            });
+            return;
+        }
+
+        const formData = { 
+            name, 
+            email, 
+            message, 
+            otp: otpValues.join("") 
+        };
 
         try {
             const response = await fetch('/api/Home/contactme', { 
@@ -95,12 +136,13 @@ const ContactMe = () => {
                 setName("");
                 setEmail("");
                 setMessage("");
-                setOtp("");
+                setOtpValues(["", "", "", ""]);
                 setShowOtpInput(false);
                 setCountdown(60);
                 setIsResendDisabled(true);
             } else {
-                toast.error("Failed to send email. Please check your OTP and try again.", {
+                const data = await response.json();
+                toast.error(data.error || "Invalid OTP. Please try again.", {
                     style: {
                         background: '#ef4444',
                         color: '#fff',
@@ -155,14 +197,20 @@ const ContactMe = () => {
                     ></textarea>
                     {showOtpInput ? (
                         <div className="space-y-4">
-                            <input
-                                name="otp"
-                                type="text"
-                                placeholder="Enter OTP"
-                                onChange={(e) => setOtp(e.target.value)}
-                                value={otp}
-                                className="w-full p-4 border rounded-lg text-black bg-white dark:bg-gray-800 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#25F5F5] transition-all duration-300 ease-in-out shadow-md"
-                            />
+                            <div className="flex justify-between gap-2">
+                                {[0, 1, 2, 3].map((index) => (
+                                    <input
+                                        key={index}
+                                        ref={otpInputs[index]}
+                                        type="text"
+                                        maxLength={1}
+                                        value={otpValues[index]}
+                                        onChange={(e) => handleOtpChange(index, e.target.value)}
+                                        onKeyDown={(e) => handleKeyDown(index, e)}
+                                        className="w-16 h-16 text-center text-2xl border rounded-lg text-black bg-white dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#25F5F5] transition-all duration-300 ease-in-out shadow-md"
+                                    />
+                                ))}
+                            </div>
                             <div className="flex justify-between items-center space-x-4">
                                 <button
                                     type="button"
